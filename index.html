@@ -17,6 +17,7 @@
       background-color: #FF6F61;
       padding: 20px;
       text-align: center;
+      position: relative;
     }
     header h1 {
       color: white;
@@ -27,8 +28,7 @@
       color: white;
       font-size: 18px;
     }
-    
-    /* Гамбургерное меню */
+
     .menu {
       display: none;
       flex-direction: column;
@@ -60,7 +60,6 @@
     .hamburger:focus {
       outline: none;
     }
-    /* Открытие меню */
     .menu.open {
       display: flex;
     }
@@ -117,6 +116,10 @@
       padding: 20px;
     }
 
+    .product-card a {
+      text-decoration: none;
+      color: inherit;
+    }
   </style>
 </head>
 <body>
@@ -125,16 +128,14 @@
   <header>
     <h1>ZoOshoP</h1>
     <p>Магазин для ваших питомцев!</p>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
   </header>
 
   <!-- Гамбургерное меню -->
-  <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
   <div class="menu" id="menu">
-    <a href="#">Главная</a>
-    <a href="#">О нас</a>
-    <a href="#">Товары</a>
-    <a href="#">Контакты</a>
-    <a href="#">Личный кабинет</a>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="auth.html">Личный кабинет</a>
   </div>
 
   <script>
@@ -151,26 +152,32 @@
       
       <!-- Товар 1 -->
       <div class="product-card">
-        <img src="dog.jpg" alt="Игрушка для собак">
-        <h3>Игрушка для собак</h3>
-        <p>Лучший выбор для вашего питомца.</p>
-        <div class="price">500 ₽</div>
+        <a href="toys.html">
+          <img src="images/dog.jpg" alt="Игрушка для собак">
+          <h3>Игрушка для собак</h3>
+          <p>Лучший выбор для вашего питомца.</p>
+          <div class="price">500 ₽</div>
+        </a>
       </div>
       
       <!-- Товар 2 -->
       <div class="product-card">
-        <img src="images/кошечка.jpg" alt="Корм для кошек">
-        <h3>Корм для кошек</h3>
-        <p>Здоровье вашего котика в каждом куске.</p>
-        <div class="price">300 ₽</div>
+        <a href="food.html">
+          <img src="images/кошечка.jpg" alt="Корм для кошек">
+          <h3>Корм для кошек</h3>
+          <p>Здоровье вашего котика в каждом куске.</p>
+          <div class="price">300 ₽</div>
+        </a>
       </div>
       
       <!-- Товар 3 -->
       <div class="product-card">
-        <img src="images/значек для товара_ шампунь для собак.png" alt="Шампунь для собак">
-        <h3>Шампунь для собак</h3>
-        <p>Мягкий уход для шерсти вашего питомца.</p>
-        <div class="price">450 ₽</div>
+        <a href="shampoo.html">
+          <img src="images/значек для товара_ шампунь для собак.png" alt="Шампунь для собак">
+          <h3>Шампунь для собак</h3>
+          <p>Мягкий уход для шерсти вашего питомца.</p>
+          <div class="price">450 ₽</div>
+        </a>
       </div>
     </div>
   </div>
