@@ -23,6 +23,11 @@
       font-size: 36px;
       margin: 0;
     }
+    header p {
+      color: white;
+      font-size: 18px;
+    }
+    
     /* Гамбургерное меню */
     .menu {
       display: none;
@@ -59,10 +64,64 @@
     .menu.open {
       display: flex;
     }
+
+    .main-section {
+      text-align: center;
+      padding: 40px;
+      background-color: #fff;
+    }
+    .main-section h2 {
+      font-size: 28px;
+      color: #333;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product-card {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #FF6F61;
+    }
+    .product-card p {
+      font-size: 16px;
+      color: #555;
+    }
+    .product-card .price {
+      font-size: 20px;
+      color: #FF6F61;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #FF6F61;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <h1>ZoOshoP</h1>
     <p>Магазин для ваших питомцев!</p>
@@ -84,6 +143,39 @@
       menu.classList.toggle('open');
     }
   </script>
+
+  <!-- Main Section -->
+  <div class="main-section">
+    <h2>Популярные товары для питомцев</h2>
+    <div class="products">
+      <!-- Товар 1 -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Игрушка для собак">
+        <h3>Игрушка для собак</h3>
+        <p>Лучший выбор для вашего питомца.</p>
+        <div class="price">500 ₽</div>
+      </div>
+      <!-- Товар 2 -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Корм для кошек">
+        <h3>Корм для кошек</h3>
+        <p>Здоровье вашего котика в каждом куске.</p>
+        <div class="price">300 ₽</div>
+      </div>
+      <!-- Товар 3 -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Шампунь для собак">
+        <h3>Шампунь для собак</h3>
+        <p>Мягкий уход для шерсти вашего питомца.</p>
+        <div class="price">450 ₽</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ZoOshoP. Все права защищены.</p>
+  </footer>
 
 </body>
 </html>
