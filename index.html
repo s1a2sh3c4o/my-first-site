@@ -135,6 +135,67 @@
   <footer>
     <p>© 2025 ZoOshoP. Все права защищены.</p>
   </footer>
+     /* Гамбургерное меню */
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #FF6F61;
+      width: 100%;
+      padding: 10px 0;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .menu a:hover {
+      text-decoration: underline;
+    }
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      font-size: 30px;
+      color: white;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .hamburger:focus {
+      outline: none;
+    }
+    /* Открытие меню */
+    .menu.open {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ZoOshoP</h1>
+    <p>Магазин для ваших питомцев!</p>
+  </header>
+
+  <!-- Гамбургерное меню -->
+  <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  <div class="menu" id="menu">
+    <a href="#">Главная</a>
+    <a href="#">О нас</a>
+    <a href="#">Товары</a>
+    <a href="#">Контакты</a>
+    <a href="#">Личный кабинет</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>
